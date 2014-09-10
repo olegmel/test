@@ -1,0 +1,34 @@
+<div class="modal">
+    <ion-header-bar class="bar-dark">
+        <h1 class="title"><i class="icon ion-ios7-person"></i> Login</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeLogin()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="doLogin()">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" placeholder="E-mail" ng-model="loginData.email">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Password" ng-model="loginData.password">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-energized" type="submit">Sign in</button>
+                    <p align="center"><a href="#">I don't remember my password</a>
+                    </p>
+                </label>
+            </div>
+        </form>
+        <div>
+            <div class="row">
+                <div class="col" align="center">
+                    <h4>Don't have an account?</h4>
+                    <p>Become a Gapminder Friend and help us spread the fact based world view.</p>
+                    <p><button class="button button-block button-outline">Sign up</button></p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</div>

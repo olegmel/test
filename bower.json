@@ -1,0 +1,7 @@
+{
+  "name": "Gapminder Desktop",
+  "private": "true",
+  "devDependencies": {
+    "font-awesome": "~4.2.0"
+  }
+}

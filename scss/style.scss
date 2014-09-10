@@ -1,0 +1,18 @@
+// Include Font-awesome
+@import "www/lib/font-awesome/scss/font-awesome.scss";
+@import "www/lib/bootstrap-sass/lib/bootstrap";
+
+$yellow: #FAC100;
+$whiteAlmost: #F9F9F9;
+$grayLightest: #EFEFF0;
+$grayLight: #CCCCCC;
+$gray: #999999;
+$grayDark: #666666;
+$grayDarkest: #333333;
+$pink: #F6419B;
+
+
+@import "navbar";
+@import "content";
+@import "video";
+

@@ -1,0 +1,151 @@
+<nav class="navbar navbar-default navbar-static bar-gapminder" ng-class="(loggedIn) ? 'bar-gapminder-loggedin' : 'bar-gapminder-normal'">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand title" href="#">Gapminder</a>
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li class="dropdown dropdown-large">
+                <a href="#" class="dropdown-toggle">{{menu.learn}}</a>
+
+                <ul class="dropdown-submenu row">
+                    <li class="col-sm-6">
+                        <ul>
+                            <li class="dropdown-header">Realize</li>
+                            <li>
+                                <a href="#">
+                                	<span class="dropdown-icon"><i class="fa fa-question-circle"></i></span>
+                                    <span class="dropdown-link-title">Massive Ignorance</span>
+                                    <span class="dropdown-link-subtitle">Among Humans</span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Explore</li>
+                            <li>
+                                <a href="#">
+                                	<span class="dropdown-icon"><i class="fa fa-money"></i></span>
+                                    <span class="dropdown-link-title">Dollar Street</span>
+                                    <span class="dropdown-link-subtitle">The world sorted by income</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="col-sm-6">
+                        <ul>
+                            <li class="dropdown-header">Realize</li>
+                            <li>
+                                <a href="#">
+                                	<span class="dropdown-icon"><i class="fa fa-plane"></i></span>
+                                    <span class="dropdown-link-title">Snail trends</span>
+                                    <span class="dropdown-link-subtitle">What "can never happen" has already happened.</span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Explore</li>
+                            <li>
+                                <a href="#">
+                                	<span class="dropdown-icon"><i class="fa fa-magic"></i></span>
+                                    <span class="dropdown-link-title">Visual Data</span>
+                                    <span class="dropdown-link-subtitle">Explore global and local statistics</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+            <li class="dropdown dropdown-large">
+                <a href="#" class="dropdown-toggle">{{menu.teach}}</a>
+
+                <ul class="dropdown-submenu row">
+                    <li class="col-sm-6">
+                        <ul>
+                            <li class="dropdown-header">Getting Started</li>
+                            <li><a href="#">90 sec intro video</a>
+                            </li>
+                            <li><a href="#">3 simple exercises</a>
+                            </li>
+                            <li><a href="#">Students favorites</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="col-sm-6">
+                        <ul>
+                            <li class="dropdown-header">Curiculum</li>
+                            <li><a href="#">Social sciences</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+            <li class="dropdown dropdown-large">
+                <a href="#" class="dropdown-toggle">{{menu.participate}}</a>
+
+                <ul class="dropdown-submenu row">
+                    <li class="col-sm-6">
+                        <ul>
+                            <li><a href="#">News</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Projects</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="col-sm-6">
+                        <ul>
+                            <li><a href="#">Organization</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Friends</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+            <li class="dropdown dropdown-large">
+                <a href="#/app/about" class="dropdown-toggle">{{menu.about}}</a>
+
+                <ul class="dropdown-submenu row">
+                    <li class="col-sm-6">
+                        <ul>
+                            <li><a href="#">News</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Projects</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="col-sm-6">
+                        <ul>
+                            <li><a href="#">Organization</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Friends</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav pull-right">
+            <li ng-if="loggedIn"><a ng-click="signOut()">Sign Out</a>
+            </li>
+            <li ng-if="loggedIn == false"><a ng-click="doLogin()">Sign In</a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav pull-right languages">
+            <li class="language-option" ng-repeat="lang in languageList"><a ng-value="lang.value" ng-model="selectedLanguage" ng-click="changeLanguage(lang.value)">{{lang.text}}</a>
+            </li>
+        </ul>
+
+
+    </div>
+</nav>
+
+<div ui-view="mainContent"></div>

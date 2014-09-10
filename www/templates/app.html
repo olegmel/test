@@ -1,0 +1,65 @@
+<div class="wrapper">
+    <div ui-view="navigation"></div>
+    <div ui-view="mainContent"></div>
+</div>
+<div class="container">
+    
+</div>
+
+
+<div class="main-menu">
+
+    <!-- <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="nav-title-slide-ios7 bar-gapminder" ng-class="(loggedIn) ? 'bar-gapminder-loggedin' : 'bar-gapminder-normal'">
+        </ion-nav-bar>
+        <ion-nav-view name="mainContent" animation="nav-title-slide-ios7">
+        </ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-stable">
+            <label class="item-input">
+                <input type="text" placeholder="{{menu.search}}">
+            </label>
+            <i class="search-icon ion-search"></i>
+        </header>
+        <ion-content class="has-header">
+            <ion-list class="main-menu">
+                <ion-item nav-clear menu-close href="#/app/home">
+                    <i class="ion-arrow-right-b"></i> {{menu.home}}
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/home">
+                    <i class="ion-arrow-right-b"></i> {{menu.learn}}
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/home">
+                    <i class="ion-arrow-right-b"></i> {{menu.teach}}
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/home">
+                    <i class="ion-arrow-right-b"></i> {{menu.participate}}
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/about">
+                    <i class="ion-arrow-right-b"></i> {{menu.about}}
+                </ion-item>
+            </ion-list>
+
+            <div class="row" ng-if="loggedIn">
+                <div class="col">
+                    <button ng-click="signOut()" class="button button-block button-light">{{menu.signout}}</button>
+                </div>
+            </div>
+            <div class="row" ng-if="loggedIn == false">
+                <div class="col">
+                    <button ng-click="login()" class="button button-block button-light">{{menu.signup}}</button>
+                </div>
+                <div class="col">
+                    <button ng-click="login()" class="button button-block button-light">{{menu.signin}}</button</div>
+                </div>
+            </div>
+
+
+            <ion-radio ng-repeat="lang in languageList" ng-value="lang.value" ng-model="selectedLanguage" ng-change="changeLanguage(lang.value)">
+                {{ lang.text }}
+            </ion-radio>
+        </ion-content>
+    </ion-side-menu> -->
+</div>

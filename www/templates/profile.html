@@ -1,0 +1,32 @@
+<div class="container gapminder-content">
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="{{user.profile_picture}}" width="100%" />
+
+            <h2>5 contributions</h2>
+        </div>
+        <div class="col-sm-9">
+            <h1>{{user.first_name}} {{user.last_name}}</h1>
+            <h3>{{user.lives_in}}</h3>
+            <a ng-if="user.others_may_contact_me" href="mailto:{{user.email}}" class="btn btn-lg btn-default"><i class="fa fa-envelope"></i> Contact {{user.first_name}}</a>
+
+            <h2>About {{user.first_name}}</h2>
+            <p>
+                {{user.about}}
+            </p>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+
+            <h2>Projects</h2>
+            <p>
+
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </p>
+            <h2>Links</h2>
+            <p>
+                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </p>
+        </div>
+    </div>
+</div>

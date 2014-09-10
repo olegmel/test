@@ -1,0 +1,53 @@
+body, h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a, a:hover, a:active {
+    color: $gray;
+}
+.gapminder-content {
+    h1, .h1 {
+        font-size: 25px;
+        color: $grayDark;
+        font-weight: normal;
+    }
+    h2, .h2 {
+        font-size: 14px;
+        color: $grayDark;
+        font-weight: normal;
+    }
+    h3, .h3 {
+        font-size: 14px;
+        color: $gray;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    h4, .h4 {
+        font-size: 14px;
+        color: $gray;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+    }
+}
+
+.related-section {
+    padding: 15px;
+    background-color: $grayLightest;
+}
+
+.contributors {
+    padding: 0px 15px;
+    .photo {
+        display: inline-block;
+        margin: 4px;
+        & > a {
+        	display: inline-block;
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+}
