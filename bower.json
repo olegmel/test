@@ -2,6 +2,7 @@
   "name": "Gapminder Desktop",
   "private": "true",
   "devDependencies": {
+    "contentful": "~0.1.2"
   },
   "dependencies": {
     "angular": "~1.3.14",

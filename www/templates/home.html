@@ -1,24 +1,19 @@
-<div class="container gapminder-content">
-
+<div class="container gapminder-content" >
     <div class="row">
         <div class="col-sm-7">
 
             <div class="row">
                 <div class="col-sm-12">
-                    <h3><a href="#">QUESTIONS</a>  <i class="fa fa-angle-right"></i> 
-                        <strong>#{{media.question_number}}</strong>
-                    </h3>
-                    <h1>- {{media.title}}</h1>
-                    <h2>SHORT ANSWER - {{media.short_answer}}</h2>
+                    <h1>{{media.title}}</h1>
                 </div>
             </div>
             <div class="video-section row">
                 <div class="video-container col-sm-12">
-                    <iframe src="http://www.youtube.com/embed/BkSO9pOVpRM?showinfo=0&modestbranding=1&rel=0" frameborder="0" width="854" height="510"></iframe>
+                    <iframe ng-src=" {{url}} " frameborder="0" width="854" height="510"></iframe>
                 </div>
 
                 <div class="col-sm-12 video-buttons">
-                    <button class="btn btn-default btn-lg">
+                    <button class="btn btn-default btn-lg" >
                         <i class="fa fa-info-circle"></i> About
                     </button>
 
@@ -36,19 +31,26 @@
                 </div>
 
             </div>
-
+            <br/>
+            <p><b>{{media.title}}</b></p>
+            <br/>
+            <p>Video about:</p>
+            <p>{{text}}</p>
+            <br/>
+            <p>Content:</p>
+            <div ng-repeat="content in contents"><p>{{content}}</p></div>
             <!-- Contributors -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4>Contributors</h4>
-                </div>
-            </div>
-            <div class="contributors">
-                <div ng-repeat="item in media.contributors" class="photo">
-                    <a href="#/app/profile/{{item.id}}" style="background-image: url({{item.profile_picture}})">
-                    </a>
-                </div>
-            </div>
+            <!--<div class="row">-->
+                <!--<div class="col-sm-12">-->
+                    <!--<h4>Contributors</h4>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="contributors">-->
+                <!--<div ng-repeat="item in media.contributors" class="photo">-->
+                    <!--<a href="#/app/profile/{{item.id}}" style="background-image: url({{item.profile_picture}})">-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
 
         </div>
         <div class="col-sm-5">
@@ -57,15 +59,16 @@
             <div class="related-section">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4>Related</h4>
+                        <h4>About</h4>
                     </div>
                 </div>
                 <div>
-                    <div class="item-thumbnail-left" ng-repeat="item in media.related" href="#/app/media/{{item.id}}">
-                        <img src="{{item.image}}">
-                        <h2>{{item.title}}</h2>
-                        <p>{{item.description}}</p>
-                    </div>
+                    {{about}}
+                    <!--<div class="item-thumbnail-left" ng-repeat="item in media.related" href="#/app/media/{{item.id}}">-->
+                        <!--<img src="{{item.image}}">-->
+                        <!--<h2>{{item.title}}</h2>-->
+                        <!--<p>{{item.description}}</p>-->
+                    <!--</div>-->
                 </div>
             </div>
 
