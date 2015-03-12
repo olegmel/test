@@ -47,8 +47,6 @@ angular.module('go.controllers', [])
         }];
         $scope.selectedLanguage = "en";
         $scope.changeLanguage($scope.selectedLanguage);
-
-
         $scope.space = $q.when(client.space());
         $scope.contentTypes = $q.when(client.contentTypes());
         $scope.name = [];
@@ -57,7 +55,6 @@ angular.module('go.controllers', [])
             if (!types || !types.length) return;
             $scope.contentType = types[4];
 
-
         }});
         $scope.$watch('contentType', function(contentType) {
             if (!contentType) return;
@@ -65,12 +62,13 @@ angular.module('go.controllers', [])
                 order: 'sys.updatedAt',
                 content_type: contentType.sys.id
             }));
-            console.log($scope.entries);
             $scope.entries.then(function(types) {{
                 $scope.media = types[0].fields;
                 $scope.video=$scope.media['related'];
+                console.log($scope.video);
                 $scope.about = $scope.media['about'];
                 $scope.video=$scope.video[0].fields;
+                $scope.video_title=$scope.video['title'];
                 $scope.text = $scope.video['about'];
                 var url = $scope.video['youtubeUrl'];
                 var watch = url.split('=');
